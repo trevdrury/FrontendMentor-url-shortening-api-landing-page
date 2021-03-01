@@ -64,11 +64,11 @@ export const BackgroundStripe = styled.div`
   height: 100%;
   background-color: ${colors.cyan};
 
-  @media (min-width: 768px) {
+  @media (min-width: 805px) {
     display: none;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1158px) {
     display: block;
     top: 153px;
     width: 1110px;

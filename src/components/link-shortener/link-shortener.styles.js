@@ -6,7 +6,6 @@ import FormInput from "../form-input/form-input.component";
 export const StyledLinkShortener = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   min-height: 160px;
   gap: 2.4rem;
@@ -43,7 +42,9 @@ export const InputWrapper = styled.div`
 `;
 
 export const ResultsWrapper = styled.div`
-  display: ${(props) => (props.showResults ? "block" : "none")};
+  display: ${(props) => (props.showResults ? "flex" : "none")};
+  flex-direction: column;
+  width: 100%;
 `;
 
 export const StyledFormInput = styled(FormInput)`

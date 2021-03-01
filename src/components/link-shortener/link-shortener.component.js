@@ -19,15 +19,13 @@ const LinkShortener = () => {
   const [width] = useWindowSize();
 
   const handleClick = async (url) => {
-    const response = await shrtcode.get(`/shorten?url=${url}`);
-    let shortLink = response.data.result.short_link;
-
-    let result = [url, shortLink];
-
-    let updatedLinkList = linkList.push(result);
-    setLinkList(updatedLinkList);
-
     setShowResults(true);
+    const response = await shrtcode.get(`/shorten?url=${url}`);
+    let ID = response.data.result.code;
+    let shortLink = response.data.result.short_link;
+    let result = [ID, url, shortLink];
+
+    setLinkList([...linkList, result]);
   };
 
   const handleChange = (e) => {
@@ -59,7 +57,11 @@ const LinkShortener = () => {
         />
       </InputWrapper>
       <ResultsWrapper showResults={showResults}>
-        <LinkList linkList={linkList} />
+        {linkList.length > 0 ? (
+          <LinkList linkList={linkList} />
+        ) : (
+          <span>Loading shortened link...</span>
+        )}
       </ResultsWrapper>
     </StyledLinkShortener>
   );

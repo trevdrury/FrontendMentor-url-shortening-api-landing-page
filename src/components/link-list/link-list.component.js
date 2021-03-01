@@ -4,7 +4,9 @@ import LinkListItem from "../link-list-item/link-list-item.component";
 
 const LinkList = ({ linkList }) => {
   const renderedLinkList = linkList.map((item) => {
-    return <LinkListItem originalUrl={item[0]} shortUrl={item[1]} />;
+    return (
+      <LinkListItem key={item[0]} originalUrl={item[1]} shortUrl={item[2]} />
+    );
   });
   return <Wrapper>{renderedLinkList}</Wrapper>;
 };
