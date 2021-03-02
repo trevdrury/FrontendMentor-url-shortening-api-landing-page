@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../button/button.component";
 import { StyledUrlSpan, Wrapper, Divider, HR } from "./link-list-item.styles";
 import { colors } from "../../cssVariables";
 import useWindowSize from "../../hooks/useWindowSize";
-import { useState } from "react/cjs/react.development";
 
 const LinkListItem = ({ originalUrl, shortUrl }) => {
   const [btnColor, setBtnColor] = useState(colors.cyan);
