@@ -27,12 +27,21 @@ export const AboutHeadline = styled.h2`
   font-size: 2.8rem;
   color: ${colors.veryDarkBlue};
   padding: 1.6rem 0;
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
+    font-weight: bold;
+  }
 `;
 
 export const AboutByline = styled.p`
   font-size: 1.6rem;
   text-align: center;
   color: ${colors.grayishViolet};
+
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const AboutSectionDetails = styled.div`
