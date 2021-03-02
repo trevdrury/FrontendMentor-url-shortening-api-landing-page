@@ -4,6 +4,7 @@ import { colors } from "../../cssVariables";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: white;
   border-radius: 5px;
   padding: 1.6rem;
@@ -11,9 +12,20 @@ export const Wrapper = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
     padding: 1.6rem 2.4rem;
+    gap: 2.4rem;
+  }
+`;
+
+export const Divider = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 `;
 

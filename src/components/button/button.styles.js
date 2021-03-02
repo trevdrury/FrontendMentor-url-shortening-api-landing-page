@@ -4,6 +4,7 @@ import { colors } from "../../cssVariables";
 // width, height, font-size
 const SIZES = {
   small: ["105px", "40px", "1.5rem"],
+  smallWide: ["295px", "40px", "1.6rem"],
   medium: ["279px", "48px", "1.8rem"],
   large: ["197px", "56px", "2rem"],
   xLarge: ["188px", "64px", "2rem"],
@@ -21,6 +22,7 @@ const handleButtonSize = (size) => {
 
 export const StyledButton = styled.button`
   ${({ size }) => handleButtonSize(size)};
+  max-width: 100%;
   border-radius: ${(props) => props.rad};
   background-color: ${(props) => props.bg};
   color: white;
