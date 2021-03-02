@@ -29,7 +29,7 @@ const LinkShortener = () => {
   };
 
   const handleChange = (e) => {
-    let regex = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+    let regex = /[-a-zA-Z0-9@:%_+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_+.~#?&//=]*)?/gi;
     setValue(e.target.value);
 
     if (!regex.test(e.target.value)) {
